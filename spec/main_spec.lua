@@ -11,7 +11,9 @@ insulate(
 
 				local comboBot = ComboBot:new(deck)
 				local result = comboBot:findBestCombo()
-				local formattedResult = ResultFormatter.format(result)
+
+				local resultFormatter = ResultFormatter:new(result)
+				local formattedResult = resultFormatter:formatResult()
 
 				print(formattedResult)
 			end
